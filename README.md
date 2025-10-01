@@ -10,5 +10,5 @@ o pra habilitar:
 
 e dps baixar as bibliotecas:
 
-    pip install opencv-python mediapipe pandas scikit-learn
+    pip install opencv-python mediapipe pandas scikit-learn numpy
 
