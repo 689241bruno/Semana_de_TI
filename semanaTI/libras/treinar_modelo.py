@@ -32,7 +32,7 @@ print(f"Amostras para Teste: {len(X_teste)}")
 
 print("\nIniciando treinamento do modelo KNN...")
 # O n_neighbors=5 define que a IA verificará os 5 vizinhos mais próximos para classificar um novo gesto.
-modelo = KNeighborsClassifier(n_neighbors=5) 
+modelo = KNeighborsClassifier(n_neighbors=3) 
 modelo.fit(X_treino, y_treino)
 
 

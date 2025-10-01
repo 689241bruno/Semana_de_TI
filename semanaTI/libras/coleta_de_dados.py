@@ -11,7 +11,7 @@ mp_hands = mp.solutions.hands
 
 CSV_FILE = 'dados_coletados.csv'
 
-LIMITE_AMOSTRAS = 150 
+LIMITE_AMOSTRAS = 300 # 300 frames de cada sinal pra mandar pra IA aprender
 
 
 def criar_cabecalho_csv():
@@ -46,6 +46,7 @@ with mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.7) a
             continue
         
         # deixa em rgb
+        frame = cv2.flip(frame, 1)
         img_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         
         results = hands.process(img_rgb)
