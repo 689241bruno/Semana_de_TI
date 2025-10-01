@@ -1,1 +1,3 @@
 venv/
+libras/dados_coletados.csv
+libras/modelo_libras.pkl
