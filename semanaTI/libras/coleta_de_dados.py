@@ -11,7 +11,7 @@ mp_hands = mp.solutions.hands
 
 CSV_FILE = 'dados_coletados.csv'
 
-LIMITE_AMOSTRAS = 300 # 300 frames de cada sinal pra mandar pra IA aprender
+LIMITE_AMOSTRAS = 600 # frames de cada sinal pra mandar pra IA aprender
 
 
 def criar_cabecalho_csv():
@@ -81,7 +81,7 @@ with mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.7) a
                 
                     if contador_amostras >= LIMITE_AMOSTRAS:
                         GRAVANDO = False
-                        print(f"Limite de {LIMITE_AMOSTRAS} amostras para o sinal '{SINAL_ATUAL}' atingido. Gravação parada.")
+                        print(SINAL_ATUAL)
                         SINAL_ATUAL = "NENHUM"
                         contador_amostras = 0 
 
